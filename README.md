@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to run & test application
 
-Things you may want to cover:
+I use docker for this test app.
 
-* Ruby version
+## To run app
 
-* System dependencies
+- docker-compose build
+- docker-compose up
 
-* Configuration
+## To run migration
 
-* Database creation
+- docker-compose run web rake db:create
+- docker-compose run web rake db:migrate
 
-* Database initialization
+## To see the routes
 
-* How to run the test suite
+- docker-compose run web rails routes
 
-* Services (job queues, cache servers, search engines, etc.)
+## To run Rspec
 
-* Deployment instructions
-
-* ...
+- docker-compose run web bundle exec rspec
